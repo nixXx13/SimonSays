@@ -1,5 +1,8 @@
-import random
 from queue import Queue
+
+"""
+Simon users logic
+"""
 
 
 class User:

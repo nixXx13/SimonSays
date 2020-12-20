@@ -1,7 +1,13 @@
+"""
+This is an interface class for controlling raspberry pi's USB voltage ( that triggers the lights effects )
+It is singleton because we want the voltage control to be centralized
+"""
 import time
+from Utils import singleton
 
 
-class LightsManager:
+@singleton
+class LightsManager(object):
 
     def __init__(self, light_delay=0.5):
         self.light_delay = light_delay
@@ -17,7 +23,6 @@ class LightsManager:
 
         # to signify last light in sequence - double delay
         self.flash_light(last_light, 2*self.light_delay)
-
 
     def flash_all_lights(self):
         print("light up in port '{}'".format(1))

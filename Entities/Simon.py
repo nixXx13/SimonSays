@@ -1,6 +1,10 @@
 import random
 import threading
 
+"""
+Simon server's logic
+"""
+
 
 class Simon(threading.Thread):
 
